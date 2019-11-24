@@ -1,58 +1,74 @@
-package assignment4;
+package Assignment4;
+
+import java.util.Scanner;
 
 public class Product {
-    private int id;
-    private String productName;
-    private int qty;
-    private double price;
+    public int Id;
+    public String ProductName;
+    public int Qty;
+    public double Price;
 
-    public Product() {
+
+    //constructor null
+    Product(){
+
+    }
+    Product(int id,String productname ,int Qty,double price){
+
     }
 
-    public Product(int id, String productName, int qty, double price) {
-        this.id = id;
-        this.productName = productName;
-        this.qty = qty;
-        this.price = price;
+
+    //getter and setter
+    public int getId(){
+        return Id;
+    }
+    public void setId(int id){
+        this.Id = id;
     }
 
-    public int getId() {
-        return id;
+    public String getProductName(){
+        return ProductName;
+    }
+    public void setProductName(String productname){
+        this.ProductName = productname;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getQty(){
+        return Qty;
+    }
+    public void setQty(int qty){
+        this.Qty = qty;
     }
 
-    public String getProductName() {
-        return productName;
+    public double getPrice(){
+        return Price;
+    }
+    public void setPrice(double price){
+        this.Price = price;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+
+    //inputproduct
+    public void inputProduct(){
+        Scanner sc = new Scanner(System.in);
+        Product p1 = new Product();
+        System.out.println("id product: ");
+        setId(sc.nextInt());
+        sc.nextLine();
+        System.out.println("Name product : ");
+        setProductName(sc.nextLine());
+        System.out.println("Qty : ");
+        setQty(sc.nextInt());
+        System.out.println("Price : ");
+        setPrice(sc.nextDouble());
     }
 
-    public int getQty() {
-        return qty;
-    }
-
-    public void setQty(int qty) {
-        this.qty = qty;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public boolean checkQty(){
-        if(this.getQty() > 0){
-            return true;
+    public void checkQty(){
+        if(getQty()> 0){
+            System.out.println( "Con hang");
+        }else{
+            System.out.println( "Het hang");
         }
-        System.out.println("san pham het hang");
-        return false;
     }
+
 }
