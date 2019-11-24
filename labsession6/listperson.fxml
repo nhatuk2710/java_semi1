@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="labsession6.ListPerson"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Text layoutX="71.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách người dùng">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <ListView onMouseClicked="#choosePerson" fx:id="tbview" layoutX="71.0" layoutY="97.0" prefHeight="412.0" prefWidth="450.0" />
+
+    </children>
+</Pane>
